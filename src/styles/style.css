@@ -1,146 +1,228 @@
-h1 {
-  font-size: 32px;
-  font-weight: 500;
-  color: #fff;
-}
 .container {
+  background-color: #6482ad;
   width: 100%;
-  background-color: #7fa1c3;
-  padding: 20px;
 }
-.navbar {
+nav {
   width: 100%;
-  padding: 10px 20px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 30px 7%;
   border-bottom: 2px solid #fff;
-  margin-bottom: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #6482ad;
 }
-.navbar input {
+h3 .a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+}
+h1 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+.home-page h1 {
+  margin-bottom: 20px;
+}
+.home-page {
+  padding: 100px 7%;
+  width: 100%;
+}
+.home-page {
   color: #7fa1c3;
-  width: 400px;
-  background-color: #fff;
-  border: 1px solid #fff;
-  font-family: serif;
 }
-.navbar input::placeholder {
+.search-bar {
+  width: 100%;
+  padding: 10px 15px;
+  background: #f5eded;
   color: #6482ad;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
-input::placeholder,
-textarea::placeholder {
+.catatan-list {
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 12px;
+}
+
+.catatan-item {
+  background: #f5eded;
+  padding: 8px;
+  border-radius: 6px;
+  overflow: auto;
+  max-width: 300px;
+}
+.catatan-item-title .title {
+  color: #6482ad;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+.date {
   color: #7fa1c3;
   font-size: 14px;
   font-weight: 400;
+  margin-bottom: 6px;
 }
-.catatan-input {
-  width: 100%;
+.catatan-item_body {
+  font-size: 16px;
+  color: #6482ad;
+  font-weight: 400;
+}
+.nav-new {
+  width: 50px;
+  height: 50px;
+  background: #f5eded;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
 }
 
-.catatan-input form {
-  display: flex;
-  max-width: 450px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  background: #fff;
-  border: 1px solid #6482ad;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px 10px rgba (0, 0, 0, 0.1);
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 50px;
-}
-.catatan-input form p {
-  font-size: 14px;
+.nav-new .icons {
+  font-size: 28px;
+  transform: translateY(3px);
   color: #6482ad;
-  font-weight: lighter;
-  text-align: right;
 }
-.catatan-input form textarea,
-input {
-  padding: 10px 16px;
+.add-page {
+  padding: 100px 7%;
+  width: 100%;
+  height: 100vh;
+  background-color: #6482ad;
+}
+.add-page h1 {
+  margin-bottom: 20px;
+}
+.add-page .catatan-input {
+  padding: 20px;
+  background-color: #f5eded;
+  height: 100%;
+}
+.add-page .catatan-input input {
   width: 100%;
   padding: 10px 15px;
-  font-size: 16px;
-  color: #6482ad;
-  background-color: transparent;
-  border: 1px solid #6482ad;
-  outline: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-.catatan-input form textarea {
-  resize: vertical;
-}
-.catatan-input form button {
-  width: 100%;
-  background-color: #6482ad;
   border: none;
-  padding: 10px;
+  outline: none;
   border-radius: 6px;
-  cursor: pointer;
-  color: #fff;
+  background-color: transparent;
+  border: 2px solid #6482ad;
+  margin-bottom: 10px;
+  color: #6482ad;
+  font-size: 16px;
 }
-.catatan-list {
-  width: 100%;
+.add-page .catatan-input .add-body {
+  border: 2px solid #6482ad;
+  border-radius: 6px;
   padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
-  background: #7fa1c3;
-  border-radius: 6px;
+  outline: none;
+  color: #6482ad;
+  font-size: 18px;
+  font-weight: 500;
+  max-height: 150px;
+  overflow: auto;
+  height: 100%;
+  margin-bottom: 10px;
 }
-.catatan-list .catatan-item {
-  padding: 10px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 17px;
-  overflow: hidden;
-}
-h3 {
+[data-placeholder]:empty:before {
+  content: attr(data-placeholder);
   color: #6482ad;
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 5px;
 }
-.catatan-list .catatan-item .catatan-item_content .catatan-item_header p {
-  color: #7fa1c3;
+.add-page .catatan-input p {
   font-size: 14px;
-  font-weight: 100;
-  margin-bottom: 7px;
-}
-.catatan-list .catatan-item .catatan-item_content .catatan-item_body {
   color: #6482ad;
-  font-size: 16px;
-  font-weight: 100;
+  margin-bottom: 3px;
+  text-align: right;
 }
-.catatan-list .catatan-item .catatan-item_action {
-  margin-top: 5px;
-  display: flex;
-  gap: 10px;
-}
-.catatan-list .catatan-item .catatan-item_action button {
-  padding: 6px 16px;
+
+.add-page .catatan-input button {
+  width: 100%;
+  padding: 8px 0px;
+  background: #6482ad;
+  color: #f5eded;
+  font-size: 18px;
   border: none;
+  outline: none;
   border-radius: 6px;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 500;
   cursor: pointer;
 }
-.catatan-list .catatan-item .catatan-item_action button:nth-child(2) {
+.detail-page {
+  width: 100%;
+  height: 100vh;
+  padding: 100px 7%;
+}
+.detail-page .detail-catatan {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f5eded;
+  position: relative;
+}
+.detail-page .detail-catatan h1 {
+  color: #6482ad;
+  font-size: 36px;
+}
+.detail-page .detail-catatan p {
+  font-size: 20px;
+}
+.detail-page .detail-catatan .action {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.detail-page .detail-catatan .action .catatan-item_action {
+  width: 300px;
+  padding: 10px;
+  background: #6482ad;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-around;
+}
+.detail-page .detail-catatan .action .catatan-item_action button {
+  padding: 6px 16px;
+  background-color: #f5eded;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: #6482ad;
+  cursor: pointer;
+}
+.arsip-page {
+  padding: 100px 7%;
+  width: 100%;
+  height: 100vh;
   background-color: #6482ad;
 }
-.catatan-list .catatan-item .catatan-item_action button:nth-child(1) {
-  background-color: #f5eded;
+.arsip-page h1 {
+  margin-bottom: 10px;
+}
+.arsip-page h3 {
   color: #7fa1c3;
+}
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+.not-found h1 {
+  color: #6482ad;
 }

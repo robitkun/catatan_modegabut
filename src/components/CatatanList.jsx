@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
 import CatatanItem from './CatatanItem';
 
 const CatatanList = ({ catatans, onDelete, onArsip }) => {
@@ -15,6 +15,12 @@ const CatatanList = ({ catatans, onDelete, onArsip }) => {
       ))}
     </div>
   );
+};
+
+CatatanList.propTypes = {
+  catatans: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onDelete: PropTypes.func.isRequired,
+  onArsip: PropTypes.func.isRequired,
 };
 
 export default CatatanList;

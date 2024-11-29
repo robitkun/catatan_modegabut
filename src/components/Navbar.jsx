@@ -1,17 +1,18 @@
-/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
-const Navbar = ({ value, onChangeKeyword }) => {
+const Navbar = () => {
   return (
     <nav className="navbar">
       <h3>
-        <Link to="/">NotesApp</Link>
+        <Link className="a" to="/">
+          NotesApp
+        </Link>
       </h3>
-      <input
-        type="text"
-        placeholder="Cari catatan..."
-        value={value}
-        onChange={(e) => onChangeKeyword(e)}
-      />
+
+      <h3>
+        <Link className="a" to="/archived">
+          Arsip
+        </Link>
+      </h3>
     </nav>
   );
 };

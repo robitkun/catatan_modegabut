@@ -2,8 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 body {
   font-family: 'Poppinst', sans-serif;
   font-style: normal;
+  background-color: #6482ad;
 }
